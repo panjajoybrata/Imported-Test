@@ -42,7 +42,12 @@ namespace CodeGenerator
     ///         foreach(var code in codes)
     ///             Console.WriteLine(code);
     ///         if (generator.CodeLength > codeLength)
+    ///         {
     ///             SaveNewCodeLength(generator.CodeLength);
+    ///             NotifyDeveloperOfApproachingCodePoolExhaustion(
+    ///                 generator.CodeLength,
+    ///                 CodeGenerator.MaxCodeLength);
+    ///         }
     ///     }
     /// }
     /// </code>
